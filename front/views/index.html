@@ -1,0 +1,26 @@
+<html>
+    <head>
+        {{> head}}
+    </head>
+    <body>
+        <h2>introduce un código para crear una partida</h2>
+        <input type="text" id="codeInput">
+        <button id="createGame">Crear partida</button>
+        <button id="joinGame">Unirte a partida creada</button>
+        <div style="color: red" id="errorMessage"></div>
+
+        <script>
+            $('#createGame').on('click', function() {
+                window.location.replace('/white?code=' + $('#codeInput').val());
+            });
+            $('#joinGame').on('click', function() {
+                window.location.replace('/black?code=' + $('#codeInput').val());
+            });
+
+            var urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('error') == 'invalidCode') {
+                $('#errorMessage').text('Invalid invite code');
+            }
+        </script>
+    </body>
+</html>

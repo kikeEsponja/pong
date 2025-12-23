@@ -1,0 +1,22 @@
+<html>
+    <head>
+        {{> head}}
+    </head>
+    <body>
+        <embed src="http://localhost:3036" width="250" height="250"></embed>
+        <center>
+            <div id="myBoard" style="width: 700px; display:flex; justify-content: center;"></div>
+            <label>Status:</label>
+            <div id="status"></div>
+            <label>PGN:</label>
+            <div id="pgn"></div>
+        </center>
+
+        <script>
+            let playerColor = '{{color}}';
+            console.log('Playing as ' + playerColor);
+        </script>
+        <script src="/public/js/index.js"></script>
+
+    </body>
+</html>
