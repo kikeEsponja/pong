@@ -1,0 +1,17 @@
+{
+  "name": "juego_pong",
+  "version": "1.0.0",
+  "description": "juego de ajedrez",
+  "main": "s_ajedrez.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "kikeEsponja",
+  "license": "UNLICENCED",
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "express-handlebars": "^8.0.4",
+    "socket.io": "^4.8.2"
+  }
+}
